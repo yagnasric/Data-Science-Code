@@ -1,0 +1,4 @@
+In this code Logistic Regression is used to classify whether a bank transaction is fraudulent or not.
+The bankrecord.csv files contains numerous other (text) columns which are not necessary to predict if the bank account is fraud. So I specifically chose only those columns which have a numerical value like 'oldBalance', 'neBalance' etc. 
+I took 20% of as the test size and 80% as training size and Scikit learn module in python is used for ML Algorithms. I particularly used Logistic Regression model. Although it is a simple model it proved 99% accuracy and hence I sticked to it. 
+I then printed out the confusion matrix and the accuracy score using sklearn.metrics of the predicted results v/s the test set to get a breif idea about the reliability of our model. It turns out our model does a good job predicting the fraudulent nature of the transactions being done. 
