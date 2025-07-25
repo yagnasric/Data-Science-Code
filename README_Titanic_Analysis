@@ -1,0 +1,3 @@
+The titanic file comtains details about the passengers and whether they were drowned or not. This model uses various Classification algorithms to predict whether a given person gets drowned ot not.
+So far Logistic Regression was the best model as it predicted 86% accuracy. Various other models (like Naive-Bayes, Decision Tree, Random Forest etc) only predicted with 74-73% accuracy. 
+Prior to applying our models on the dataset I cleaned them using common methods in pandas data frame. Like taking care of missing values by fillna() method etc. I had to drop irrelevant columns in the data frame to make the model effecient. 
