@@ -1,0 +1,14 @@
+The ncr_ride_bookings.csv file contains the essential details required to analyze the given Uber bookings by various customers. It has columns like Date, Time, Booking ID, Customer ID, Vehicle Type, Booking Status etc. (It has a total of 20 columns)
+The basic EDA (exploratory data analysis) and data cleaning was done in the first half of the code. Under Vehicle Type column 'eBike' is replaced with 'E-Bike' and the nan values of the columns 'Avg VTAT' and 'Avg CTAT' is replaced with their respective mean values in their columns.
+The nan values in the columns 'Reason for cancelling by Customer', 'Driver Cancellation Reason' and 'Incomplete Rides Reason' are replaced/filled as 'Unknown'.
+Next we can see what are the possible 'Booking Status' that exist in the dataset. There are 5 of them 1.Completed 2.Cancelled by Driver 3.No driver found 4.Cancelled by customer 5.Incomplete
+Using them we can find out the total number of cancelled rides(the rides whose booking status is 'Cancelled by driver', 'Cancelled by customer') and after dividing this number by total number of rides we can get the percentage of rides that will be cancelled.
+Overall the Cancelled rides percentage comes out to be 25% (so 1 in every 4 booking will be cancelled).
+The next aim is to predict the Booking Status of a customer based on various factors like: Time, Avg VTAT, Avg CTAT, Booking Value, Ride Distance, Driver Ratings, Customer Ratings, Day of Week, Month and Year
+Firstly the essential data form the Date column is extracted using certain methods in Pandas library. By doing this we get Time, Day of the Week, Month and Year in a numerical form. 
+Next we fill in the nan values in the "Avg VTAT","Avg CTAT","Booking Value","Ride Distance","Driver Ratings","Customer Rating" columns by their mean values.
+We fill in the nan values in the 'Payment Method' column by its mode value. We use the LabelEncoder class from Scikit Learn to label the categorical data like "Booking Status","Vehicle Type","Pickup Location","Drop Location","Payment Method".
+It is now time to split the data set into training set and test set. This is achieved by using train_test_split from Scikit Learn library. We chose 20% as our test_size.'
+A Random Forest Classifier fucntion is next employed to train the training set suing n_estimators as 200. This function is called with the help of Scikit Learn Ensemble module. After the training is done it is tested on the test set.
+This is the predicted result. Using the original result and the predicted result we can call the Confusion Matrix and Accuracy Score using Scikit Learn Metrics module. 
+Finally the accuracy score turned out to be: 0.9674 which means given the required data the model predicts your Booking Status (1.Completed 2.Cancelled by Driver 3.No driver found 4.Cancelled by customer 5.Incomplete) with 96.74% accuracy. 
