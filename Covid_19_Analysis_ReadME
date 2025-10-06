@@ -1,0 +1,16 @@
+The analysis of this Dataset is done using Python libraries like: 1. Pandas 2.Matplotlib 3. Seaborn. The total number of data sets imported using pandas are four, namely: 
+1. covid_19_clean_complete 2. country_wise_latest 3. usa_county_wise 4. worldometer_data. Firstly Null Values in each dataset is checked. Out of all the datasets only worldometer_data has significant Null Values
+Rest all the datasets has no Null Values. The date column in df_clean dataset is converted to a convient date format for further exeuction for Machine Learning/Dataset wrangling purposes. 
+A new dataset called global_ts is declared wherein the total sum of all the Confirmed, Deaths and Recovered is are arranged Date wise. A graph is then plotted using this global_ts which shows how
+the total Confirmed, Deaths and Recovered are realted to Date. The graphs shown using this method indicates that there is a sharp increaase in the spread of the disease. Primarily the Confiremd and
+Recovered cases are increasing at a faster pace than Death cases. 
+A new dataset is introduced called 'latest' it rearranges the df_clean dataset by the latest dates in the top. Using this dataset another dataset is created called country_totals it contains all sum
+of all the Confirmed, Deaths and Recovered arranged by each 'Cpuntry/Region'. Out of these top 15 Confirmed cases are stored in a new dataset called 'top15'. A barplot is made using Seaborn library
+where x = 'Confiremd' cases, y = 'Country/Reagion' and its dataset = 'top15'. 
+Next out of all the 'top15' countries 'top6' countries are taken with their Confirmed cases and as well as their Dates. Using Matplotlib library a graph is for top 6 countries where x-axis is 
+Dates, y-axis = Confirmed cases. 
+A dataset called daily_new is created where is represents each case Confirmed, Deaths and Recovered per given Date. Number of Confirmed cases per given data is then plotted as a barplot graph 
+using Seaborn library. 
+Next Death rate is calculatedd for each Country/Region by dividing country_totals['Deaths']/country_totals['Confirmed'] columns and naming it as country_totals['cfr'] for further data visualizatoin 
+purposes. Out of all the Death rates the top 15 Countries Death Rates are plotted as a bar graph. 
+From Seaborn library a Heatmap is also is plotted with Confirmed, Deaths and Recovered data. Most of these variables are highly correalated (which is expected). 
