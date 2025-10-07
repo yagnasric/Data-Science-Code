@@ -14,3 +14,8 @@ using Seaborn library.
 Next Death rate is calculatedd for each Country/Region by dividing country_totals['Deaths']/country_totals['Confirmed'] columns and naming it as country_totals['cfr'] for further data visualizatoin 
 purposes. Out of all the Death rates the top 15 Countries Death Rates are plotted as a bar graph. 
 From Seaborn library a Heatmap is also is plotted with Confirmed, Deaths and Recovered data. Most of these variables are highly correalated (which is expected). 
+A 'RecoveryRate' column is added in df_country dataset whose definition is (RecoveredCases/ConfirmedCases)*100. Out of these top 10 recoveries are considered for further analysis. 
+A barplot is illustrated wherein x = 'RecoveryRate', y = 'Country/Region'. 
+In USA for each state total sum of cases is considered as a single dataset. Out of these top 10 are considered and a barplot is plotted with respect to confirmed cases and Country/Region.
+By plaotting all the graphs and barplotts relevant insightss are drawn. Like which Country/Region has growth rate in terms of Confirmed/ Recovered Cases.
+Also what are the vaious correaltion factors of Confiremd, Deaths and Recovered variabels for each Country/Region. 
