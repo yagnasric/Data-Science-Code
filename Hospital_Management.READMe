@@ -1,0 +1,5 @@
+Four csv files have been imported using read_csv method in Pandas: 1. service_weekly 2. staff 3. patients 4. staff_schedule. Using Seborn Satisfaction levels are visualized woth respect 
+to every services in patients.csv file by barplot method. Out of all the services General Medicine has least satisfaction and Surgery has highest satisfaction levels. A new column is added 
+in the patients.csv file called 'age_group'. This is made using 'cut' method in pands to make list of age_groups like '0-10', '10-20', .. , '60+'. Next 'age_group' and 'satsifaction_levels' are
+plotted as a barplot using seaborn. Among these there is not much variation among the different 'age_groups'. Arrival Month in terms of a number is extracted from 'Arrival _Date' column in 
+patients.csv file. A barplot is plotted between 'Arrival_Month' and 'Satisfaction_Levels'. The data is pretty consistent except there is a slight dip in the March month. 
